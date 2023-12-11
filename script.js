@@ -3,11 +3,16 @@ const question = document.querySelector(".question");
 const gif = document.querySelector(".gif");
 const yesBtn = document.querySelector(".yes-btn");
 const noBtn = document.querySelector(".no-btn");
+const date = new Date();
+
+var day = date.getDate()+1;
 
 yesBtn.addEventListener("click", () => {
-  question.innerHTML = "Yayy, see you on the 9!";
+  question.innerHTML = "Yayy, see you on the "+day+"!";
   gif.src =
     "https://media.giphy.com/media/dHSVvJaC8aJG22vrjS/giphy.gif";
+  yesBtn.classList.add("yes-pressed");
+  noBtn.classList.add("yes-pressed");
 });
 
 noBtn.addEventListener("mouseover", () => {
